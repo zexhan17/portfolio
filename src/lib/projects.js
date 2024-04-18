@@ -1,7 +1,7 @@
 export const projects = [
     {
         title: 'Expense Tracker',
-        link: 'https://expense-tracker-zexhan17.vercel.app/',
+        link: 'https://expense-tracker-zexhan17s-projects.vercel.app/',
         desc: `Expense Tracker web application using browser storage not any cloud. No need to install mobile apps for your simple daily tasks.`,
         tags: ['svelte', 'tailwind css', 'daisyUi']
     },
