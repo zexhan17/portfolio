@@ -1,10 +1,10 @@
 <script>
     import { onMount } from "svelte";
     import { fade, fly } from "svelte/transition";
-    import Post from "$lib/post.svelte";
+    import Post from "$lib/Post.svelte";
 
-    let show = false;
-    let str = `I build accessible, inclusive products and digital experiences for the web.`;
+    let show = $state(false);
+    const str = `I build accessible, inclusive products and digital experiences for the web.`;
 
     onMount(() => {
         setTimeout(() => {
@@ -18,9 +18,7 @@
             node.childNodes[0].nodeType === Node.TEXT_NODE;
 
         if (!valid) {
-            throw new Error(
-                `This transition only works on elements with a single text node child`,
-            );
+            return;
         }
 
         const text = node.textContent;
@@ -59,6 +57,7 @@
                 </div>
                 <!-- icons -->
                 <div class="flex gap-4">
+                    <!-- svelte-ignore a11y_consider_explicit_label -->
                     <a
                         transition:fly={{ y: -50, delay: 600 }}
                         href="https://www.linkedin.com/in/muhammad-zeeshan-801448144"
@@ -75,6 +74,7 @@
                             /></svg
                         >
                     </a>
+                    <!-- svelte-ignore a11y_consider_explicit_label -->
                     <a
                         transition:fly={{ y: -50, delay: 650 }}
                         href="https://github.com/zexhan17"
