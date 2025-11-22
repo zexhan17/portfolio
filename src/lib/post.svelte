@@ -1,8 +1,10 @@
 <script>
     import { projects } from "$lib/projects";
     import { onMount } from "svelte";
-    import { fade, fly } from "svelte/transition";
+    import { fade } from "svelte/transition";
+
     let show = false;
+
     onMount(() => {
         setTimeout(() => {
             show = true;
@@ -22,14 +24,14 @@
     </p>
 {/if}
 
-{#each projects as p, i}
+{#each projects as p}
     {#if show}
         <a target="_blank" href={p.link}>
             <div
                 target="_blank"
                 href={p.link}
                 transition:fade={{ duration: 2000 }}
-                class="my-5 group hover:bg-slate-800/50 rounded-lg p-5 cursor-pointer hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg"
+                class="my-5 group hover:bg-slate-800/50 rounded-lg p-5 cursor-pointer"
             >
                 <h1 class="text-xl font-semibold group-hover:text-teal-300">
                     {p.title}
@@ -37,22 +39,24 @@
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        class="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 ml-1 translate-y-px"
+                        class="inline-block h-4 w-4 shrink-0 ml-1"
                         aria-hidden="true"
-                        ><path
+                    >
+                        <path
                             fill-rule="evenodd"
                             d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
                             clip-rule="evenodd"
-                        /></svg
-                    >
+                        />
+                    </svg>
                 </h1>
                 <p class="mt-1 mb-3">{p.desc}</p>
                 <div class="gap-3 flex flex-wrap">
                     {#each p.tags as tag}
                         <span
                             class="capitalize flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
-                            >{tag}</span
                         >
+                            {tag}
+                        </span>
                     {/each}
                 </div>
             </div>
