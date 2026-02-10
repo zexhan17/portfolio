@@ -4,7 +4,7 @@
     import Post from "$lib/Post.svelte";
 
     let show = $state(false);
-    const str = `I build accessible, inclusive products and digital experiences for the web.`;
+    const str = `I craft innovative, user-focused web applications that solve real-world problems and drive business success.`;
 
     onMount(() => {
         setTimeout(() => {
