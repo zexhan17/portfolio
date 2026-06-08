@@ -31,9 +31,15 @@ export const projects = [
     },
     {
         title: 'ERP Application',
-        link: '',
+        link: 'https://nextjs-erp.vercel.app',
         desc: 'This ERP leverages SvelteKit and PocketBase to deliver a high-performance, real-time business suite for managing sales, inventory, and billing.',
         tags: ['Svelte', 'SvelteKit', 'PocketBase', 'Tailwind CSS', 'DaisyUI']
+    },
+    {
+        title: 'Journaling Web App',
+        link: 'https://thoughts-sharing.vercel.app/',
+        desc: 'A journaling web app that allows users to create and share their thoughts. Users can create, edit, and delete journal entries, and share them with friends or the public.',
+        tags: ['React.js', 'Tailwind CSS']
     },
     {
         title: 'Crowdfunding Web App',
@@ -47,10 +53,10 @@ export const projects = [
         desc: 'Easy and simple browser storage based web application. Hold your daily cash record without involving any third party.',
         tags: ['Svelte', 'Tailwind CSS', 'DaisyUI']
     },
-    {
-        title: 'Online Notice Board Web App',
-        link: 'https://notice-board-zexhan17.vercel.app/auth/login',
-        desc: 'Admin can publish notice for one specific class or whole department or for the whole college. Admin can manage users. Students can view notices, profiles and can message admin.',
-        tags: ['Svelte', 'SvelteKit', 'PocketBase', 'Tailwind CSS', 'DaisyUI']
-    }
+    // {
+    //     title: 'Online Notice Board Web App',
+    //     link: 'https://notice-board-zexhan17.vercel.app/auth/login',
+    //     desc: 'Admin can publish notice for one specific class or whole department or for the whole college. Admin can manage users. Students can view notices, profiles and can message admin.',
+    //     tags: ['Svelte', 'SvelteKit', 'PocketBase', 'Tailwind CSS', 'DaisyUI']
+    // }
 ];
