@@ -36,3 +36,4 @@ describe('Projects Data', () => {
 		expect(uniqueTitles.size).toBe(titles.length);
 	});
 });
+
