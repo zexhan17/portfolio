@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { render, screen, act } from '@testing-library/svelte';
+import { render, screen, act, cleanup } from '@testing-library/svelte';
 import Page from './+page.svelte';
 
 describe('Home Page (+page.svelte)', () => {
@@ -7,7 +7,11 @@ describe('Home Page (+page.svelte)', () => {
 		vi.useFakeTimers();
 	});
 
-	afterEach(() => {
+	afterEach(async () => {
+		await act(() => {
+			vi.advanceTimersByTime(4000);
+		});
+		cleanup();
 		vi.useRealTimers();
 	});
 
@@ -20,7 +24,7 @@ describe('Home Page (+page.svelte)', () => {
 		const { container } = render(Page);
 
 		await act(() => {
-			vi.advanceTimersByTime(1100);
+			vi.advanceTimersByTime(3500);
 		});
 
 		expect(screen.getByText('Muhammad Zeeshan')).toBeDefined();

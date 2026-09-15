@@ -27,6 +27,13 @@ describe('Projects Data', () => {
 				expect(typeof tag).toBe('string');
 				expect(tag.trim().length).toBeGreaterThan(0);
 			}
+
+			if (project.badge) {
+				expect(typeof project.badge).toBe('string');
+			}
+			if (project.isLive !== undefined) {
+				expect(typeof project.isLive).toBe('boolean');
+			}
 		}
 	});
 
@@ -35,5 +42,16 @@ describe('Projects Data', () => {
 		const uniqueTitles = new Set(titles);
 		expect(uniqueTitles.size).toBe(titles.length);
 	});
-});
 
+	it('should place live working projects at the top of the list', () => {
+		let seenNonLive = false;
+		for (const project of projects) {
+			if (!project.isLive) {
+				seenNonLive = true;
+			} else if (seenNonLive) {
+				// If a live project is found after a non-live project, fail
+				expect.unreachable(`Live project "${project.title}" found after non-live project`);
+			}
+		}
+	});
+});

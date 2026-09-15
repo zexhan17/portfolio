@@ -6,11 +6,12 @@ export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	test: {
 		environment: 'happy-dom',
-		include: ['src/**/*.{test,spec}.{js,ts}']
+		include: ['src/**/*.{test,spec}.{js,ts}'],
+		setupFiles: ['src/tests/setup.js']
 	},
 	resolve: process.env.VITEST
 		? {
-			conditions: ['browser']
-		}
+				conditions: ['browser']
+		  }
 		: undefined
 });

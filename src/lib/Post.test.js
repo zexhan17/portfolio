@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { render, screen, act } from '@testing-library/svelte';
+import { render, screen, act, cleanup } from '@testing-library/svelte';
 import Post from './Post.svelte';
 import { projects } from './projects.js';
 
@@ -8,7 +8,11 @@ describe('Post Component', () => {
 		vi.useFakeTimers();
 	});
 
-	afterEach(() => {
+	afterEach(async () => {
+		await act(() => {
+			vi.advanceTimersByTime(4000);
+		});
+		cleanup();
 		vi.useRealTimers();
 	});
 
@@ -21,7 +25,7 @@ describe('Post Component', () => {
 		render(Post);
 
 		await act(() => {
-			vi.advanceTimersByTime(1100);
+			vi.advanceTimersByTime(3500);
 		});
 
 		expect(screen.getByText(/Each project in my portfolio represents/i)).toBeDefined();
@@ -31,11 +35,23 @@ describe('Post Component', () => {
 		}
 	});
 
+	it('renders Live App badges for live working projects', async () => {
+		render(Post);
+
+		await act(() => {
+			vi.advanceTimersByTime(3500);
+		});
+
+		const liveBadges = screen.getAllByText('Live App');
+		const expectedLiveCount = projects.filter((p) => p.isLive).length;
+		expect(liveBadges.length).toBe(expectedLiveCount);
+	});
+
 	it('renders project links with target="_blank"', async () => {
 		const { container } = render(Post);
 
 		await act(() => {
-			vi.advanceTimersByTime(1100);
+			vi.advanceTimersByTime(3500);
 		});
 
 		const links = container.querySelectorAll('a');
@@ -47,4 +63,3 @@ describe('Post Component', () => {
 		}
 	});
 });
-
