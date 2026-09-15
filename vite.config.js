@@ -3,5 +3,14 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit()]
+	plugins: [tailwindcss(), sveltekit()],
+	test: {
+		environment: 'happy-dom',
+		include: ['src/**/*.{test,spec}.{js,ts}']
+	},
+	resolve: process.env.VITEST
+		? {
+				conditions: ['browser']
+		  }
+		: undefined
 });

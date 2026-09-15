@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { fade, fly } from "svelte/transition";
+    import { base } from "$app/paths";
     import Post from "$lib/Post.svelte";
 
     let show = $state(false);
@@ -110,7 +111,7 @@
                     </a> -->
                     <a
                         transition:fly={{ y: -50, delay: 750 }}
-                        href="resume.pdf"
+                        href="{base}/resume.pdf"
                         download>Resume</a
                     >
                 </div>
