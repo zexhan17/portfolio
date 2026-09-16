@@ -1,9 +1,37 @@
 export const projects = [
 	{
-		title: 'Lanjut — ATS Resume Builder',
-		link: 'https://lanjut.rimzzlabs.com',
-		desc: 'Privacy-focused, browser-based ATS resume builder with structured rich-text schemas, live template galleries, and instant PDF generation.',
-		tags: ['React', 'TypeScript', 'Tailwind CSS', 'ATS Engine', 'Vite'],
+		title: 'Yalgamers.gg',
+		link: 'https://yalgamers.gg',
+		desc: 'Freelance full-stack developer role building a Web 3.0 gaming platform targeting the MENA region, integrating esports tournament features, multiplayer lobbies, and blockchain technology.',
+		tags: ['Full Stack', 'Svelte', 'SvelteKit', 'React', 'NestJS', 'PostgreSQL'],
+		isLive: true
+	},
+	{
+		title: 'My Ride — Vehicle Lifecycle PWA',
+		link: 'https://zexhan17.github.io/my-ride/',
+		desc: 'Modern, offline-first vehicle management PWA with multi-vehicle garage tracking, fuel logs, service reminders, cost analytics, and IndexedDB storage.',
+		tags: ['React', 'TypeScript', 'PWA', 'Tailwind CSS', 'IndexedDB', 'Recharts'],
+		isLive: true
+	},
+	{
+		title: 'Budget Planner',
+		link: 'https://zexhan17.github.io/budget-planner/',
+		desc: 'Responsive personal budget planning application with spending category breakdowns, real-time balance calculations, and monthly savings analytics.',
+		tags: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS'],
+		isLive: true
+	},
+	{
+		title: 'Event & Guest Manager',
+		link: 'https://zexhan17.github.io/event-guest-manager/',
+		desc: 'Mobile-first event coordinator and guest list manager featuring live headcount tracking, attendee statuses, and offline browser storage.',
+		tags: ['React', 'Vite', 'Tailwind CSS', 'LocalStorage'],
+		isLive: true
+	},
+	{
+		title: 'Expense Tracker',
+		link: 'https://zexhan17.github.io/expense-tracker/',
+		desc: 'Zero-dependency, offline-first personal financial ledger running in the browser for daily cashflow, category, and wallet management.',
+		tags: ['Svelte', 'Tailwind CSS', 'DaisyUI', 'LocalStorage'],
 		isLive: true
 	},
 	{
@@ -39,13 +67,6 @@ export const projects = [
 		link: 'https://grow-hub-zexhan17.vercel.app/auth/login',
 		desc: 'Full-featured crowdfunding web app supporting campaign creation, donor pledges, and back-office administrative management.',
 		tags: ['Svelte', 'SvelteKit', 'PocketBase', 'Tailwind CSS', 'DaisyUI'],
-		isLive: true
-	},
-	{
-		title: 'Expense Tracker',
-		link: 'https://expense-tracker-zexhan17s-projects.vercel.app',
-		desc: 'Zero-dependency, offline-first personal financial ledger running in the browser for daily cashflow tracking.',
-		tags: ['Svelte', 'Tailwind CSS', 'DaisyUI', 'LocalStorage'],
 		isLive: true
 	},
 	{
@@ -88,20 +109,6 @@ export const projects = [
 		link: 'https://github.com/zexhan17/freelancer-invoicing',
 		desc: 'Client billing and invoice generator web tool with custom tax calculations, payment status trackers, and PDF downloads.',
 		tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
-		badge: 'Open Source'
-	},
-	{
-		title: 'Budget Planner',
-		link: 'https://github.com/zexhan17/budget-planner',
-		desc: 'Responsive personal budget planning application with spending category breakdowns and monthly savings analytics.',
-		tags: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS'],
-		badge: 'Open Source'
-	},
-	{
-		title: 'Event & Guest Manager',
-		link: 'https://github.com/zexhan17/event-guest-manager',
-		desc: 'Mobile-first guest list and event attendance tracker with headcount analytics and zero-backend offline browser storage.',
-		tags: ['React', 'Vite', 'Tailwind CSS', 'LocalStorage'],
 		badge: 'Open Source'
 	}
 ];

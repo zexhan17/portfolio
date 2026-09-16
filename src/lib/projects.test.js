@@ -7,6 +7,20 @@ describe('Projects Data', () => {
 		expect(projects.length).toBeGreaterThan(0);
 	});
 
+	it('should have Yalgamers.gg as the first top project with full-stack freelance description', () => {
+		expect(projects[0].title).toBe('Yalgamers.gg');
+		expect(projects[0].isLive).toBe(true);
+		expect(projects[0].desc.toLowerCase()).toContain('freelance');
+		expect(projects[0].desc.toLowerCase()).toContain('full-stack');
+	});
+
+	it('should not contain Lanjut', () => {
+		for (const project of projects) {
+			expect(project.title.toLowerCase()).not.toContain('lanjut');
+			expect(project.link.toLowerCase()).not.toContain('lanjut');
+		}
+	});
+
 	it('each project should have valid structure and fields', () => {
 		for (const project of projects) {
 			expect(project.title).toBeDefined();
@@ -49,7 +63,6 @@ describe('Projects Data', () => {
 			if (!project.isLive) {
 				seenNonLive = true;
 			} else if (seenNonLive) {
-				// If a live project is found after a non-live project, fail
 				expect.unreachable(`Live project "${project.title}" found after non-live project`);
 			}
 		}
