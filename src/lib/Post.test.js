@@ -28,7 +28,7 @@ describe('Post Component', () => {
 			vi.advanceTimersByTime(3500);
 		});
 
-		expect(screen.getByText(/Each project in my portfolio represents/i)).toBeDefined();
+		expect(screen.getByText(/curated collection of production applications/i)).toBeDefined();
 
 		for (const project of projects) {
 			expect(screen.getByText(project.title)).toBeDefined();

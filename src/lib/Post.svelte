@@ -13,14 +13,8 @@
 </script>
 
 {#if show}
-    <p transition:fade={{ duration: 2000 }} class="px-5">
-        Each project in my portfolio represents not just lines of code, but a
-        vision brought to life, a challenge met, and a solution elegantly
-        crafted. From seamless user interfaces to robust backend architectures,
-        every endeavor is a testament to my passion for creating intuitive,
-        delightful experiences. Dive into my projects, and you'll find more than
-        just codes and designs – you'll discover the heart and soul I pour into
-        each line and pixel.
+    <p transition:fade={{ duration: 2000 }} class="px-5 leading-relaxed text-slate-400">
+        A curated collection of production applications and systems I’ve engineered — bridging modern reactive frontends with resilient backends. From Web3 platforms and offline-first PWAs to AI-driven tools, every project reflects a commitment to performance, scalability, and thoughtful design.
     </p>
 {/if}
 
