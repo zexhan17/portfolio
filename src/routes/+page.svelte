@@ -109,11 +109,11 @@
                             />
                         </svg>
                     </a> -->
-                    <a
+                    <!-- <a
                         transition:fly={{ y: -50, delay: 750 }}
                         href="{base}/resume.pdf"
                         download>Resume</a
-                    >
+                    > -->
                 </div>
             </div>
         </div>

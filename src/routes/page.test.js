@@ -20,7 +20,7 @@ describe('Home Page (+page.svelte)', () => {
 		expect(container).toBeDefined();
 	});
 
-	it('renders name, title, and social links after mount timer fires', async () => {
+	it('renders name, title, and social links while hiding resume link after mount', async () => {
 		const { container } = render(Page);
 
 		await act(() => {
@@ -29,10 +29,9 @@ describe('Home Page (+page.svelte)', () => {
 
 		expect(screen.getByText('Muhammad Zeeshan')).toBeDefined();
 		expect(screen.getByText('Software Engineer')).toBeDefined();
-		expect(screen.getByText('Resume')).toBeDefined();
 
-		const resumeLink = screen.getByText('Resume');
-		expect(resumeLink.getAttribute('download')).toBeDefined();
+		// Verify resume link is hidden
+		expect(screen.queryByText('Resume')).toBeNull();
 
 		const linkedinLink = container.querySelector('a[href*="linkedin.com"]');
 		expect(linkedinLink).toBeDefined();
