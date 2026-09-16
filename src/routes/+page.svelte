@@ -5,7 +5,7 @@
     import Post from "$lib/Post.svelte";
 
     let show = $state(false);
-    const str = `I craft innovative, user-focused web applications that solve real-world problems and drive business success.`;
+    const str = `I engineer fast, scalable web applications and resilient architectures — turning ambitious ideas into seamless, high-impact digital experiences.`;
 
     onMount(() => {
         setTimeout(() => {
@@ -52,7 +52,7 @@
                     >
                         Software Engineer
                     </h3>
-                    <span transition:typewriter class="block mt-4 max-w-xs">
+                    <span transition:typewriter class="block mt-4 max-w-sm leading-relaxed">
                         {str}
                     </span>
                 </div>
