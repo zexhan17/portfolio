@@ -8,11 +8,11 @@
 [![TailwindCSS v4](https://img.shields.io/badge/TailwindCSS-v4-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Vitest](https://img.shields.io/badge/Vitest-v5-6E9F18?style=flat&logo=vitest&logoColor=white)](https://vitest.dev/)
 [![pnpm](https://img.shields.io/badge/pnpm-v10-F69220?style=flat&logo=pnpm&logoColor=white)](https://pnpm.io/)
-[![Static Site](https://img.shields.io/badge/Hosted_on-GitHub_Pages-222222?style=flat&logo=github&logoColor=white)](https://zexhan17.github.io/portfolio/)
+[![Static Site](https://img.shields.io/badge/Hosted_on-GitHub_Pages-222222?style=flat&logo=github&logoColor=white)](https://zexhan17.is-a.dev/)
 
 A modern, high-performance personal portfolio website built with **SvelteKit 2**, **Svelte 5**, and **Tailwind CSS v4**, configured for zero-friction static deployment on **GitHub Pages** via automated GitHub Actions CI/CD.
 
-[**Explore Live Demo »**](https://zexhan17.github.io/portfolio/) · [**Download Resume »**](https://zexhan17.github.io/portfolio/resume.pdf) · [**Connect on LinkedIn »**](https://www.linkedin.com/in/muhammad-zeeshan-801448144)
+[**Explore Live Demo »**](https://zexhan17.is-a.dev/) · [**Download Resume »**](https://zexhan17.is-a.dev/resume.pdf) · [**Connect on LinkedIn »**](https://www.linkedin.com/in/muhammad-zeeshan-801448144)
 
 </div>
 
@@ -204,7 +204,7 @@ On every `git push` to `main`:
 **Muhammad Zeeshan**  
 - **GitHub**: [@zexhan17](https://github.com/zexhan17)  
 - **LinkedIn**: [muhammad-zeeshan-801448144](https://www.linkedin.com/in/muhammad-zeeshan-801448144)  
-- **Live Portfolio**: [https://zexhan17.github.io/portfolio/](https://zexhan17.github.io/portfolio/)
+- **Live Portfolio**: [https://zexhan17.is-a.dev/](https://zexhan17.is-a.dev/)
 
 ---
 
